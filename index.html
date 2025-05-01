@@ -1,71 +1,134 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="bg-gray-950 text-white">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sporim — P2P Betting</title>
     <link rel="icon" type="image/png" href="/favicon.png" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @keyframes fade-in {
+        from { opacity: 0; transform: translateY(12px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      .animate-fade-in {
+        animation: fade-in 0.8s ease-out both;
+      }
+    </style>
   </head>
-  <body class="bg-gray-950 text-white font-sans">
+  <body class="font-sans leading-relaxed">
     <!-- Hero Section -->
-    <section class="min-h-screen flex flex-col justify-center items-center text-center px-6">
-      <h1 class="text-4xl md:text-5xl font-bold mb-4">
-        Bet Against Friends. Instantly.
+    <section class="px-6 py-20 md:py-32 text-center max-w-4xl mx-auto">
+      <div class="flex justify-center items-center gap-3 mb-6 px-4 py-2 bg-blue-900/20 rounded-full text-blue-400 text-sm animate-fade-in">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h12a2 2 0 012 2z"/></svg>
+        <span>Native Telegram Integration</span>
+        <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <span>TON Smart Contracts</span>
+      </div>
+
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6 animate-fade-in">
+        Simple P2P Betting.<br />
+        <span class="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">No Odds. No Complications.</span>
       </h1>
-      <p class="text-lg md:text-xl max-w-xl mb-6 text-gray-300">
-        Create and settle peer-to-peer bets directly inside Telegram. Powered by TON blockchain.
+
+      <p class="text-lg md:text-xl max-w-md mx-auto mb-10 text-zinc-400 font-light animate-fade-in">
+        Create bets while chatting with friends on Telegram. Settled instantly on TON blockchain via smart contracts.
       </p>
-      <a
-        href="https://t.me/posporimbot"
-        class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-2xl shadow-lg transition"
-      >
+
+      <a href="https://t.me/posporimbot"
+         class="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-2xl shadow-lg transition animate-fade-in">
         🚀 Launch in Telegram
       </a>
     </section>
 
     <!-- How It Works -->
-    <section class="py-16 px-6 bg-gray-900 text-center">
-      <h2 class="text-3xl font-bold mb-10">How It Works</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+    <section class="py-20 px-6 max-w-4xl mx-auto">
+      <h2 class="text-3xl font-semibold mb-12 text-center">How It Works</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
         <div>
-          <h3 class="text-xl font-semibold mb-2">1. Create a Bet</h3>
-          <p class="text-gray-400">Pick your side and define the terms inside the Telegram mini app.</p>
+          <h3 class="text-xl font-medium mb-2">01 — Create a P2P Bet</h3>
+          <p class="text-zinc-400">Challenge a friend with your own terms – no odds, just straight bets.</p>
         </div>
         <div>
-          <h3 class="text-xl font-semibold mb-2">2. Invite Friends</h3>
-          <p class="text-gray-400">Share the bet with your friends or betting community.</p>
+          <h3 class="text-xl font-medium mb-2">02 — Connect Your Wallet</h3>
+          <p class="text-zinc-400">Use Telegram Wallet or TONkeeper with just a click.</p>
         </div>
         <div>
-          <h3 class="text-xl font-semibold mb-2">3. Settle On-Chain</h3>
-          <p class="text-gray-400">Winners get paid instantly using smart contracts on TON.</p>
+          <h3 class="text-xl font-medium mb-2">03 — Get Results</h3>
+          <p class="text-zinc-400">Winners paid instantly via TON – transparently settled on-chain.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Wallet Options -->
+    <section class="py-20 px-6 bg-zinc-900/30">
+      <div class="max-w-4xl mx-auto text-center">
+        <div class="flex justify-center items-center gap-2 mb-6">
+          <svg class="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16v16H4z" /></svg>
+          <h2 class="text-2xl md:text-3xl font-semibold">Easy Wallet Connection</h2>
+        </div>
+        <p class="text-zinc-400 mb-10 max-w-lg mx-auto">
+          Connect seamlessly with your preferred wallet. All transactions are secured and verified on the TON blockchain.
+        </p>
+
+        <div class="flex flex-col md:flex-row gap-6 justify-center items-center">
+          <!-- Telegram Wallet -->
+          <div class="p-6 bg-zinc-800/50 rounded-lg border border-blue-900/20 flex flex-col items-center max-w-xs transition-all hover:border-blue-600/30 hover:bg-zinc-800/70">
+            <div class="w-12 h-12 bg-blue-900/20 rounded-full flex items-center justify-center mb-4">
+              <img src="https://ton.org/download/ton_symbol.svg" alt="Telegram Wallet" class="w-6 h-6" />
+            </div>
+            <h3 class="font-medium text-lg mb-2">Telegram Wallet</h3>
+            <p class="text-sm text-zinc-400 mb-4 text-center">Use Telegram's built-in wallet for the simplest experience.</p>
+            <button class="bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium px-4 py-2 rounded-md flex items-center">
+              <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 12a6 6 0 11-12 0 6 6 0 0112 0z"/><path d="M12 8v4l2 2"/></svg>
+              Connect Telegram Wallet
+            </button>
+          </div>
+
+          <!-- TONkeeper -->
+          <div class="p-6 bg-zinc-800/50 rounded-lg border border-blue-900/20 flex flex-col items-center max-w-xs transition-all hover:border-blue-600/30 hover:bg-zinc-800/70">
+            <div class="w-12 h-12 bg-blue-900/20 rounded-full flex items-center justify-center mb-4">
+              <img src="https://yellow-gigantic-dragonfly-501.mypinata.cloud/ipfs/bafkreig36ojokjuuceh6od7lo5znotsdi2nvehoyw644qdmrgwbbjjsljy" alt="TONkeeper" class="w-6 h-6" />
+            </div>
+            <h3 class="font-medium text-lg mb-2">Tonkeeper</h3>
+            <p class="text-sm text-zinc-400 mb-4 text-center">Connect your external TONkeeper wallet for advanced features.</p>
+            <button class="bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium px-4 py-2 rounded-md flex items-center">
+              <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M10 13a5 5 0 105-5"/></svg>
+              Connect Tonkeeper
+            </button>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Features -->
-    <section class="py-16 px-6 text-center">
-      <h2 class="text-3xl font-bold mb-10">Why Sporim?</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+    <section class="py-20 px-6 max-w-4xl mx-auto">
+      <h2 class="text-3xl font-semibold mb-12 text-center">The Sporim Difference</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
         <div>
-          <h3 class="text-xl font-semibold mb-2">⚡ Fast & Easy</h3>
-          <p class="text-gray-400">No sign-ups or logins. Just launch in Telegram.</p>
+          <div class="text-4xl mb-2">👥</div>
+          <h3 class="text-xl font-semibold mb-2">True P2P Betting</h3>
+          <p class="text-zinc-400">Bet directly with friends – no bookmakers, no complicated odds or spreads.</p>
         </div>
         <div>
-          <h3 class="text-xl font-semibold mb-2">🔒 Secure & Transparent</h3>
-          <p class="text-gray-400">Smart contracts on TON ensure trustless execution.</p>
+          <div class="text-4xl mb-2">🔍</div>
+          <h3 class="text-xl font-semibold mb-2">Complete Transparency</h3>
+          <p class="text-zinc-400">Every bet settled on-chain with publicly verifiable contracts – no manipulation.</p>
         </div>
         <div>
-          <h3 class="text-xl font-semibold mb-2">📱 Mobile-First</h3>
-          <p class="text-gray-400">Optimized for the Telegram experience on any device.</p>
+          <div class="text-4xl mb-2">⚡</div>
+          <h3 class="text-xl font-semibold mb-2">Simple & Instant</h3>
+          <p class="text-zinc-400">Create, accept, and settle bets in seconds right inside Telegram.</p>
         </div>
       </div>
     </section>
 
     <!-- Footer -->
-    <footer class="py-10 text-center text-sm text-gray-500">
-      Built with ❤️ on Telegram + TON | <a href="https://t.me/posporimbot" class="underline">Launch Sporim</a>
+    <footer class="py-10 text-center text-sm text-zinc-500">
+      <a href="https://t.me/posporimbot" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-5 rounded-xl mb-4 transition">
+        🚀 Launch Sporim in Telegram
+      </a>
+      <p>The simplest way to bet with friends on Telegram + TON</p>
     </footer>
   </body>
 </html>
-
